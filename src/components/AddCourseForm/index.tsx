@@ -55,6 +55,7 @@ export const AddCourseForm = ({ scale, addCourse }: Props) => {
         alert('You must enter a valid grade');
         return;
       }
+      setGrade('');
     } else {
       const gradeLetter = grade as ExtendedGradeLetter;
       gradeNumber = getGradeNumber(scale, gradeLetter);
@@ -69,8 +70,6 @@ export const AddCourseForm = ({ scale, addCourse }: Props) => {
     });
 
     setCourseName('');
-    setCredit('');
-    setGrade('');
   };
 
   const gradeOptions = (scale === '4.3' ? gradeLetters : extendedGradeLetters).map((grade) => {
