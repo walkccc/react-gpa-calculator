@@ -1,0 +1,86 @@
+@import '../../lib/utils/index.scss';
+
+.course {
+  @include flexSpaceBetween();
+  background: rgba(255, 255, 255, 0.1);
+  height: 2.5rem;
+  margin-bottom: 0.1rem;
+  padding: 0.4rem 0.4rem;
+
+  span {
+    position: relative;
+    transition: opacity 0.4s linear;
+
+    &.striked {
+      opacity: 0.3;
+
+      @keyframes strikeitem {
+        to {
+          width: calc(110%);
+        }
+      }
+
+      &:before {
+        animation: strikeitem 0.3s ease-out 0s forwards;
+        background: white;
+        content: '';
+        height: 0.1rem;
+        left: -0.2rem;
+        position: absolute;
+        top: 50%;
+        width: 0%;
+      }
+    }
+  }
+
+  button {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 0.4rem;
+  }
+
+  form {
+    @include flexSpaceBetween();
+
+    input,
+    button {
+      font-family: 'Quicksand', sans-serif;
+      height: 2rem;
+    }
+
+    input {
+      border: none;
+      border-radius: 1rem;
+
+      &.course-name {
+        padding-left: 1rem;
+        width: 50%;
+      }
+
+      &.credit {
+        text-align: center;
+        width: 10%;
+      }
+
+      &.grade {
+        text-align: center;
+        width: 15%;
+      }
+    }
+
+    button {
+      background: rgba(128, 181, 93, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      cursor: pointer;
+      font-weight: bold;
+      padding: 0.3rem;
+
+      &:hover {
+        background: #aad36b;
+      }
+    }
+  }
+}

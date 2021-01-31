@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  background: linear-gradient(90deg, #519dd0, #87cabd, #6fb5a7);
+  font-size: 1.1rem;
+  font-family: 'Quicksand', sans-serif;
+  height: 100%;
+  line-height: 1.5;
+}

@@ -1,0 +1,48 @@
+@import '../../lib/utils/index.scss';
+
+.new-course-form {
+  margin: 1rem auto;
+
+  form,
+  .header {
+    @include flexSpaceBetween();
+    font-size: medium;
+    margin-bottom: 0.5rem;
+
+    .course-name {
+      padding-left: 1rem;
+      width: 55%;
+    }
+
+    .grade {
+      text-align: center;
+      width: 15%;
+    }
+
+    .credit {
+      text-align: center;
+      width: 15%;
+    }
+
+    button,
+    .dummy {
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+      font-size: 1rem;
+      width: 10%;
+      -webkit-appearance: none;
+    }
+  }
+
+  form {
+    input,
+    select {
+      border: none;
+      border-radius: 1rem;
+      height: 2rem;
+      width: 15%;
+    }
+  }
+}
